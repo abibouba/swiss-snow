@@ -1,12 +1,13 @@
-import requests
 import re
 from datetime import datetime
+
+import requests
 from bs4 import BeautifulSoup
+
 from .Resort import Resort
 
 
 def parse_website_verbier():
-
     # Set the URL
     url_verbier = "http://www.infosnow.ch/~apgmontagne/?lang=en&pid=31"
 
@@ -27,7 +28,6 @@ def parse_website_verbier():
 
     # Get the slopes stats
     html_slopes = soup.find_all('h1')[1].text
-    test = re.findall(r'\d+', html_slopes)
     verbier.slopes_open = re.findall(r'\d+', html_slopes)[0]
     verbier.slopes_total = re.findall(r'\d+', html_slopes)[1]
 

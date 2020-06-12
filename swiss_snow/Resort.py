@@ -1,4 +1,5 @@
 from datetime import datetime
+
 from .Condition import Condition
 
 
@@ -84,5 +85,5 @@ class Resort:
 
     def __str__(self):
         return self.name + " - Avalanche risk: " + str(self.avalanche_level) + " - Open slopes: " \
-               + str(self.slopes_open) + "/" + str(self.slopes_total) + " - Open lifts: " + str(self.lifts_open) + "/" +\
+               + str(self.slopes_open) + "/" + str(self.slopes_total) + " - Open lifts: " + str(self.lifts_open) + "/" + \
                str(self.lifts_total) + " - Last update: " + str(self.last_update)
